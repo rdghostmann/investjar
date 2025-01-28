@@ -1,0 +1,71 @@
+import InvestmentPlan from "@/models/InvestmentPlan";
+import { connectDB } from "@/utils/connectDB";
+
+const ProfitCalculator = async () => {
+  // Fetch plans from the database
+  await connectDB();
+  const rawPlans = await InvestmentPlan.find({}).lean();
+  const plans = rawPlans.map((plan) => ({
+    ...plan,
+    _id: plan._id.toString(), // Ensure _id is a string
+  }));
+
+  const handleCalculation = (formData) => {
+    const amount = parseFloat(formData.get("amount"));
+    const selectedPlanId = formData.get("selectedPlan");
+    const plan = plans.find((p) => p._id === selectedPlanId);
+
+    if (plan && amount >= plan.minAmount && amount <= plan.maxAmount) {
+      const roi = (amount * plan.roi) / 100;
+      return `Estimated Profit: $${roi.toFixed(2)}`;
+    } else {
+      return "Please select a valid plan and enter a valid amount.";
+    }
+  };
+
+  return (
+    <div className="border rounded-lg p-6 bg-gray-100">
+      <h2 className="text-xl font-semibold mb-4">ROI Profit Calculator</h2>
+      <form action="" method="POST">
+        <div className="mb-4">
+          <label className="block mb-2">Investment Amount ($):</label>
+          <input
+            type="number"
+            name="amount"
+            required
+            className="w-full px-4 py-2 border rounded"
+            placeholder="Enter amount"
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2">Select Plan:</label>
+          <select
+            name="selectedPlan"
+            required
+            className="w-full px-4 py-2 border rounded"
+          >
+            <option value="">-- Select a Plan --</option>
+            {plans.map((plan) => (
+              <option key={plan._id} value={plan._id}>
+                {plan.name} (${plan.minAmount} - ${plan.maxAmount}, {plan.roi}% ROI)
+              </option>
+            ))}
+          </select>
+        </div>
+        <button
+          type="submit"
+          className="px-4 py-2 bg-customPurple text-white rounded hover:bg-green-600"
+        >
+          Calculate ROI
+        </button>
+         {profit !== null && (
+        <p className="mt-4 text-lg font-semibold">
+          Estimated Profit: ${profit.toFixed(2)}
+        </p>
+      )}
+      </form>
+    </div>
+  );
+};
+
+export default ProfitCalculator;
