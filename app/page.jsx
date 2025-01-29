@@ -36,8 +36,8 @@ export default async function Home() {
       {/* <WatchList /> */}
       <AmazingFeatures />
       <HowItWorks />
-      <OurMission />
-      {/* <ROIPlan /> */}
+      {/* <OurMission /> */}
+      <ROIPlan />
       <CallToAction />
       <InvestorsActivity />
       <FAQ />
