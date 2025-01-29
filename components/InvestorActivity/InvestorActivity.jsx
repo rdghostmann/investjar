@@ -11,24 +11,21 @@ const deposits = [
   {
     id: "1",
     name: "Lewis Lee",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 02:10:59 PM",
+    date: "Nov-3-2021",
     amount: 3600,
     currency: "BTC",
   },
   {
     id: "2",
     name: "Sarah Chen",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 01:45:23 PM",
+    date: "Nov-3-2021",
     amount: 5200,
     currency: "ETH",
   },
   {
     id: "3",
     name: "Michael Brown",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 01:30:11 PM",
+    date: "Nov-3-2021",
     amount: 2800,
     currency: "BTC",
   },
@@ -38,24 +35,21 @@ const withdrawals = [
   {
     id: "1",
     name: "Emma Wilson",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 02:15:33 PM",
+    date: "Nov-3-2021",
     amount: 1500,
     currency: "ETH",
   },
   {
     id: "2",
     name: "James Rodriguez",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 01:55:47 PM",
+    date: "Nov-3-2021",
     amount: 4200,
     currency: "BTC",
   },
   {
     id: "3",
     name: "Lisa Wang",
-    avatar: "/placeholder.svg",
-    date: "Nov-3-2021 01:40:22 PM",
+    date: "Nov-3-2021",
     amount: 3100,
     currency: "BTC",
   },
@@ -69,13 +63,13 @@ export default function InvestorsActivity() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.2),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(79,70,229,0.2),transparent_50%)]" />
 
-      <div className="relative  px-5 mx-auto">
+      <div className="relative px-5 mx-auto">
         <div className="text-center mb-12">
           <span className="text-blue-400 font-medium">Investors Activity</span>
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
             Real Time Statistics
           </h2>
-          <p className="text-blue-100/70 max-w-2xl mx-auto">
+          <p className="text-blue-100/70 px-2 max-w-2xl mx-auto">
             Fast and easy way to earn money by making secure and safe investments. Our investors real time activity
             listed below.
           </p>
@@ -149,7 +143,6 @@ export default function InvestorsActivity() {
                           <TableRow key={transaction.id} className="border-b border-indigo-500/20 hover:bg-indigo-900/20">
                             <TableCell className="flex items-center gap-2 text-blue-100">
                               <Avatar className="h-8 w-8 border border-indigo-500/20">
-                                <AvatarImage src={transaction.avatar} />
                                 <AvatarFallback className="bg-indigo-950 text-blue-200">
                                   {transaction.name[0]}
                                 </AvatarFallback>

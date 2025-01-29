@@ -5,8 +5,8 @@ import FaQImg from "../../public/faqImg.png"
 import Image from "next/image";
 export default function FAQ() {
   return (
-    <div className="min-h-screen bg-white text-gray-600 p-4 md:p-8">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <div className=" bg-white text-gray-600 px-4 md:p-8">
+      <div className="max-w-6xl mx-auto my-12 grid md:grid-cols-2 gap-8 items-center">
         {/* Left side - Image */}
         <div className="hidden md:block">
           <Image

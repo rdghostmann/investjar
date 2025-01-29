@@ -9,10 +9,10 @@ export default function OurMission() {
     <div className="min-h-screen bg-white text-slate-700">
 
       {/* Mission Section */}
-      <section className="w-full px-4 py-12 md:py-20 bg-white">
+      <section className="w-full px-5 py-12 md:py-20 bg-white">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12">
-            <div className="w-3/6">
+            <div className="w-5/6 bg-gray-900">
               <Image
                 src={smokySky}
                 alt="Dashboard Interface"
@@ -25,7 +25,7 @@ export default function OurMission() {
               <div className="space-y-4">
                 <span className="text-indigo-600">Our Mission to help our User</span>
                 <h2 className="text-3xl md:text-5xl font-bold text-indigo-600">To Maximize Money</h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 w-5/6">
                   We are a worldwide investment company committed to the principle of revenue maximization and
                   reduction of financial risks at investing.
                 </p>

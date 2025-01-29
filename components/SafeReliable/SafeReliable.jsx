@@ -3,11 +3,12 @@ import { Button } from "@/components/ui/button"
 
 export default function SafeReliable() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 to-blue-800 overflow-hidden">
+    <section className="w-full relative bg-gradient-to-br from-blue-900 to-blue-800 overflow-hidden">
       {/* <div className="absolute inset-0 bg-[url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/safemoney6-F6MnrlJ3VjEegYw0ZWEJmJ0Tfum1VH.png')] bg-cover bg-center opacity-10" /> */}
 
-      <div className="relative px-12 py-12 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="relative px-5 py-12 md:py-24">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"> */}
+        <div className="grid grid-cols-1 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -49,7 +50,7 @@ export default function SafeReliable() {
           </div>
 
           {/* Right Column - App Preview */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] aspect-square">
               <div className="absolute inset-0 bg-slate-400/10  rounded-full animate-pulse" />
               <div className="absolute inset-[15%] bg-slate-400/20 rounded-full animate-pulse delay-300" />
@@ -93,7 +94,7 @@ export default function SafeReliable() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

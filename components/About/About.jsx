@@ -7,9 +7,9 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white text-slate-700">
       {/* Hero Section */}
-      <section className="w-full px-4 py-4 md:py-8">
-        <div className="px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <section className="w-full py-4 md:py-8">
+        <div className="px-4">
+          <div className="flex pb-6 flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="w-full sm:w-3/4">
               <Image
                 src={About1}

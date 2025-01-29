@@ -9,44 +9,43 @@ import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import InvestorsActivity  from "@/components/InvestorActivity/InvestorActivity";
 import Jumbotron from "@/components/Jumbotron/Jumbotron";
 import LogoClouds from "@/components/LogoClouds/LogoClouds";
+import MotionCard from "@/components/MotionCard/MotionCard";
 import MyHeader from "@/components/MyHeader/MyHeader";
 import OurMission  from "@/components/OurMission/OurMission";
 import ROIPlan from "@/components/ROIPlan/ROIPlan";
 import SafeReliable from "@/components/SafeReliable/SafeReliable";
 import StartEarning from "@/components/StartEarning/StartEarning";
 import Statistics from "@/components/Statistics/Statistics";
+import Stats from "@/components/Statistics/Stats";
 
-import WatchList from "@/components/WatchList/WatchList";
-
+ 
 
 export default async function Home() {
 
   return (
-    <main className="flex flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col items-center justify-between">
 
       {/* <Navbar1 /> */}
       <CoinPriceMarqueeWidget />
       {/* <Banner /> */}
       {/* <MyHeader /> */}
       <Jumbotron />
-      {/* <Statistics /> */}
+      <Stats />
       <LogoClouds />
       <About />
       {/* <WatchList /> */}
       <AmazingFeatures />
       <HowItWorks />
-      {/* <OurMission /> */}
-      <ROIPlan />
+      <OurMission />
+      {/* <ROIPlan /> */}
       <CallToAction />
       <InvestorsActivity />
       <FAQ />
       <SafeReliable />
-      {/* <MotionCard /> */}
-      <StartEarning />
+      {/* <StartEarning /> */}
       <Footer />
       {/* <Testimonials /> */}
       {/* <Plans /> */}
-      {/* <WhyChoose /> */}
 
     </main >
   );
