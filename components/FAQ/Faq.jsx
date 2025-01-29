@@ -33,7 +33,7 @@ export default function FAQ() {
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1" className="border-indigo-600/20">
-              <AccordionTrigger className="hover:text-indigo-600">How can I start working with Riovest?</AccordionTrigger>
+              <AccordionTrigger className="hover:text-indigo-600">How can I start working with InvestJar?</AccordionTrigger>
               <AccordionContent className="text-gray-600">
                 Contact our support team to get started with your investment journey.
               </AccordionContent>
@@ -50,10 +50,10 @@ export default function FAQ() {
 
             <AccordionItem value="item-3" className="border-indigo-600/20">
               <AccordionTrigger className="hover:text-indigo-600">
-                Can I reinvest profit from my Riovest account balance?
+                Can I reinvest profit from my InvestJar account balance?
               </AccordionTrigger>
               <AccordionContent className="text-gray-600">
-                <p>In order to make a reinvestment deposit from your Riovest account balance, follow the instructions:</p>
+                <p>In order to make a reinvestment deposit from your InvestJar account balance, follow the instructions:</p>
                 <ul className="list-disc pl-6 mt-2 space-y-1">
                   <li>Login to your account</li>
                   <li>Click "Make deposit"</li>
